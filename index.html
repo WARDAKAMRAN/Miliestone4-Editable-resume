@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Editable resume with live preview, profile upload, and download option">
+  <title>Editable Resume</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1> Editable Resume Builder </h1>
+    <form id="resumeForm">
+      <!-- Full Name -->
+      <div class="input-group">
+        <label for="fullname">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+      </div>
+
+      <!-- Email -->
+      <div class="input-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+
+      <!-- Phone Number -->
+      <div class="input-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+      </div>
+
+      <!-- Gender -->
+      <div class="input-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+        </select>
+      </div>
+
+      <!-- Education -->
+      <div class="input-group">
+        <label for="education">Education:</label>
+        <input type="text" id="education" name="education" placeholder="Enter your education details" required>
+      </div>
+
+      <!-- Work Experience -->
+      <div class="input-group">
+        <label for="workExperience">Work Experience:</label>
+        <textarea id="workExperience" name="workExperience" placeholder="Enter your work experience"></textarea>
+      </div>
+
+      <!-- Skills -->
+      <div class="input-group">
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" name="skills" placeholder="Enter your skills">
+      </div>
+
+      <!-- Profile Picture Upload -->
+      <div class="input-group">
+        <label for="profilePic">Profile Picture:</label>
+        <input type="file" id="profilePic" name="profilePic" accept="image/*">
+      </div>
+
+      <!-- Generate Resume Button -->
+      <button type="button" id="generateBtn">Generate Resume</button>
+    </form>
+
+    <!-- Resume Output -->
+    <div id="resumeOutput" class="resume-output hidden">
+      <img id="profileImage" class="profile-image" alt="Profile Picture">
+      <h2 id="outputName"></h2>
+      <p><strong>Email:</strong> <span id="outputEmail"></span></p>
+      <p><strong>Phone:</strong> <span id="outputPhone"></span></p>
+      <p><strong>Gender:</strong> <span id="outputGender"></span></p>
+      <p><strong>Education:</strong> <span id="outputEducation"></span></p>
+      <p><strong>Work Experience:</strong> <span id="outputExperience"></span></p>
+      <p><strong>Skills:</strong> <span id="outputSkills"></span></p>
+    </div>
+
+    <!-- Edit and Download Buttons -->
+    <button type="button" id="editBtn" class="hidden">Edit Resume</button>
+    <button type="button" id="downloadBtn" class="hidden">Download PDF</button>
+  </div>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+
+  <script src="script.js"></script>
+</body>
+</html> 
